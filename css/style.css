@@ -337,13 +337,13 @@ h5 {
 
 }
 .button {
-   position: absolute;
+    position: absolute;
     right: 10px;
     top: 0;
     color: #fff;
     font-size: 18px;
     display: inline-block;
-
+    font-size: 24px;
     letter-spacing: 1px;
     font-weight: bold;
     border-bottom: 3px solid #AD0201;
