@@ -170,6 +170,7 @@ a, li {
 .registration button:hover {
     background-color: #ad0201;
     border-bottom: 3px solid #930201;
+    cursor: pointer;
 }
 
 .registration button:active {
