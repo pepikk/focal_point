@@ -12,7 +12,7 @@ header {
 b {
     font-weight: bold;
 }
-a, li {
+a, li,button {
     -webkit-transition: border .3s ease-in,background-color .3s ease-in;
     -moz-transition: border .3s ease-in,background-color .3s ease-in;
     -ms-transition: border .3s ease-in,background-color .3s ease-in;
