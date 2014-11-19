@@ -29,11 +29,12 @@ a, li,button {
     float: left;
 }
 .navigation {
+    padding-top: 19px;
     float: right;
+
 }
 .navigation li {
     display: inline-block;
-
     position: relative;
 }
 .blog:before {
@@ -319,38 +320,42 @@ h5 {
     width: 42px;
     height: 35px;
     top: -8px;
-    left: 101%;
+    left: 100%;
     background: url(../img/heart.png) no-repeat 0 0;
 }
 .start {
     background-color: #323232;
     padding: 30px 0 30px;
-    position: relative;
+
 
 }
 .start h2 {
     font-size: 36px;
     font-weight: bold;
     color: #fff;
-    line-height: 60px;
-    left: 0;
+    display: block;
+    text-align: center;
 
 }
+.start .ba-width-1-3 {
+    text-align: right;
+}
+.start .ba-width-2-3 {
+    text-align: left;
+}
 .button {
-    position: absolute;
-    right: 10px;
-    top: 0;
     color: #fff;
-    font-size: 18px;
     display: inline-block;
     font-size: 24px;
     letter-spacing: 1px;
     font-weight: bold;
     border-bottom: 3px solid #AD0201;
     text-decoration: none;
+    text-align: center;
     padding: 20px 10px 20px 35px;
     background:#CB0201 linear-gradient(to top, rgba(203,2,1,1),rgba(255,255,255,0.3));
 }
+
 .button:hover {
     background: #b50201;
 }
@@ -393,6 +398,7 @@ footer span {
     .navigation {
         float: none;
         display: block;
+        padding-top: 0;
 
     }
     .navigation li {
@@ -431,16 +437,12 @@ footer span {
         padding-left: 20px;
         padding-right: 20px;
     }
-    .start h2 {
-        display: block;
-        text-align: center;
-        line-height: 1;
-        margin-bottom: 10px;
+    .bg-white h2:before {
+        left: 96%;
     }
     .button {
         display: inline-block;
         text-align: center;
-        position: static;
     }
     .start {
         text-align: center;
@@ -457,5 +459,17 @@ footer span {
     .nav-menu {
         text-align: center;
         float: none;
+    }
+    .start .ba-width-2-3 {
+        width: 100%;
+        text-align: center;
+    }
+    .start h2 {
+
+        margin-bottom: 20px;
+    }
+    .start .ba-width-1-3 {
+        width: 100%;
+        text-align: center;
     }
 }
