@@ -527,11 +527,11 @@ footer span {
     .overlay {
         visibility: hidden;
         opacity: 0;
-        -webkit-transition: all .6s ease-in;
-        -moz-transition: all .6s ease-in;
-        -ms-transition: all .6s ease-in;
-        -o-transition: all .6s ease-in;
-        transition: all .6s ease-in;
+        -webkit-transition: all .4s ease-in;
+        -moz-transition: all .4s ease-in;
+        -ms-transition: all .4s ease-in;
+        -o-transition: all .4s ease-in;
+        transition: all .4s ease-in;
 
     }
     .menu-open .overlay {
