@@ -567,11 +567,11 @@ footer span {
         bottom: 0;
         right: 0;
         left: 100%;
-        -webkit-transition: all .6s ease-in;
-        -moz-transition: all .6s ease-in;
-        -ms-transition: all .6s ease-in;
-        -o-transition: all .6s ease-in;
-        transition: all .6s ease-in;
+        -webkit-transition: all .4s ease-in;
+        -moz-transition: all .4s ease-in;
+        -ms-transition: all .4s ease-in;
+        -o-transition: all .4s ease-in;
+        transition: all .4s ease-in;
 
 
 
