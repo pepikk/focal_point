@@ -8,16 +8,17 @@ header {
     background-color: #000;
 
 
+
 }
 b {
     font-weight: bold;
 }
-a, li,button {
-    -webkit-transition: border .3s ease-in,background-color .3s ease-in;
-    -moz-transition: border .3s ease-in,background-color .3s ease-in;
-    -ms-transition: border .3s ease-in,background-color .3s ease-in;
-    -o-transition: border .3s ease-in,background-color .3s ease-in;
-    transition: border .3s ease-in,background-color .3s ease-in;
+a, li,button, {
+    -webkit-transition: border .3s ease-in,background-color .3s ease-in, .3s ease-in;
+    -moz-transition: border .3s ease-in,background-color .3s ease-in, .3s ease-in;
+    -ms-transition: border .3s ease-in,background-color .3s ease-in, .3s ease-in;
+    -o-transition: border .3s ease-in,background-color .3s ease-in, .3s ease-in;
+    transition: border .3s ease-in,background-color .3s ease-in, .3s ease-in;
 }
 .ba-container-center {
     max-width: 980px;
@@ -36,6 +37,7 @@ a, li,button {
 .navigation li {
     display: inline-block;
     position: relative;
+    border:1px solid rgba(255,255,255,0);
 }
 .blog:before {
     content: '';
@@ -48,9 +50,7 @@ a, li,button {
     position: absolute;
 
 }
-.blog {
-    border:1px solid rgba(255,255,255,0);
-}
+
 .login:before {
     content: '';
     left: 15px;
@@ -62,12 +62,18 @@ a, li,button {
     position: absolute;
 
 }
-.login {
+.navigation li.login {
     border: 1px solid rgba(255, 255, 255, 0.4);
     margin-left: 10px;
 }
-.navigation li a {
+.navigation .blog a,
+.navigation .login a{
     padding: 15px 15px 15px 45px;
+
+
+}
+.navigation li a{
+    padding: 15px;
     text-decoration: none;
     color: #fff;
     font-weight: 700;
@@ -471,5 +477,76 @@ footer span {
     .start .ba-width-1-3 {
         width: 100%;
         text-align: center;
+    }
+}
+.menu-toggle {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    margin: 0;
+}
+#menu-toggle {
+    display: none;
+}
+.menu-toggle .line,
+.menu-toggle:before,
+.menu-toggle:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+
+}
+.menu-toggle .line,
+.menu-toggle:after {
+    margin-top: 6px;
+}
+@media (min-width: 480px) {
+    .menu-toggle {
+        display: none;
+    }
+}
+@media (max-width: 479px) {
+
+    #menu-toggle:checked + .navigation {
+        display: block;
+
+    }
+
+
+    .navigation li {
+        display: block;
+        text-align: left;
+
+    }
+    .navigation li.login {
+        border: 1px solid rgba(255, 255, 255, 0);
+        margin-left: 0;
+    }
+    .navigation li:hover {
+        border: 1px solid #fff;
+    }
+    .navigation {
+        display: none;
+        clear: both;
+
+    }
+    nav {
+
+    }
+    header .logo {
+        float: left;
+        padding-bottom: 10px;
+    }
+    .menu-toggle {
+        float: right;
+        margin-top: 20px;
+    }
+    header {
+        padding: 0;
     }
 }
