@@ -6,6 +6,7 @@ body {
 }
 header {
     background-color: #000;
+    position: static;
 
 
 
@@ -23,7 +24,7 @@ a, li,button, {
 .ba-container-center {
     max-width: 980px;
     padding: 0 10px;
-    position: relative;
+   ;
 }
 .logo {
     padding: 8px 0 27px 25px ;
@@ -401,12 +402,8 @@ footer span {
         float: none;
         display: inline-block;
     }
-    .navigation {
-        float: none;
-        display: block;
-        padding-top: 0;
 
-    }
+
     .navigation li {
         text-align: center;
     }
@@ -488,6 +485,7 @@ footer span {
     padding: 0;
     margin: 0;
 }
+
 #menu-toggle {
     display: none;
 }
@@ -512,11 +510,42 @@ footer span {
 }
 @media (max-width: 479px) {
 
-    #menu-toggle:checked + .navigation {
-        display: block;
+    /*#menu-toggle:checked + .navigation {*/
+        /*display: block;*/
+
+    /*}*/
+
+    .menu-open .navigation {
+
+        left: 50%;
+        background-color: #000;
+        z-index: 10;
+        visibility: visible;
+
 
     }
+    .overlay {
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .6s ease-in;
+        -moz-transition: all .6s ease-in;
+        -ms-transition: all .6s ease-in;
+        -o-transition: all .6s ease-in;
+        transition: all .6s ease-in;
 
+    }
+    .menu-open .overlay {
+        visibility: visible;
+        position: fixed;
+        z-index: 9;
+
+        background-color: rgba(0, 0, 0, 0.41);
+        opacity: 1;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        top: 0;
+    }
 
     .navigation li {
         display: block;
@@ -531,8 +560,20 @@ footer span {
         border: 1px solid #fff;
     }
     .navigation {
-        display: none;
+        position: fixed;
         clear: both;
+        visibility: hidden;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 100%;
+        -webkit-transition: all .6s ease-in;
+        -moz-transition: all .6s ease-in;
+        -ms-transition: all .6s ease-in;
+        -o-transition: all .6s ease-in;
+        transition: all .6s ease-in;
+
+
 
     }
     nav {
